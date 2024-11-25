@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main  # Change this to your target branch
+  workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
   build:
@@ -30,4 +31,4 @@ jobs:
       - name: Display summary
         run: |
           echo "Docker image has been saved and uploaded."
-          echo "![Docker Image](https://github.com/${{ github.repository }}/actions/artifacts/${{ github.run_id }}/docker-image/image.tar)"
+          echo "You can download it from the artifacts section."
