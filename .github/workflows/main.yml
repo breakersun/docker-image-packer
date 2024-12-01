@@ -16,11 +16,11 @@ jobs:
 
       - name: Pull Docker image
         run: |
-          docker pull qdtoday/qd:latest  # Replace with your Docker image
+          docker pull linuxserver/jellyfin:latest  # Replace with your Docker image
 
       - name: Save Docker image to tar
         run: |
-          docker save qdtoday/qd:latest -o image.tar  # Replace with your Docker image
+          docker save linuxserver/jellyfin:latest -o image.tar  # Replace with your Docker image
 
       - name: Upload tar file to GitHub Actions summary
         uses: actions/upload-artifact@v4
